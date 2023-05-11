@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+    
+</head>
+<body>
+    <div class="corpo">
+        <h1>Calculadora IMC</h1>
+        <hr>
+        <div>
+            <label for="nome"><strong>Nome:</strong></label> 
+            <input type="text" name="nome" placeholder="Digite seu nome" class="input nome" oninput="namevalidate()">
+            <span class="spans"><p> O nome precisa ter mais que 2 letras</p></span>
+        </div>
+        <div>
+           <label for="altura"><strong>Altura:</strong></label> 
+           <input type="number" name="altura" placeholder="Digite sua altura" class="input altura" id="altura" oninput="alturavalidate()">
+           <span class="spans"> <p>Exemplo: 1,69</p></span>
+        </div>
+        <div>
+            <label for="peso"><strong>Peso:</strong></label> 
+            <input type="number" name="peso" placeholder="Digite seu peso" class="input peso" oninput="pesovalidate()">
+            <span class="spans"><p>Digite mais que 1 carcter</p></span>
+        </div>
+        <div>
+            <input type="button" value="Calcular" name="calcular" id="botão" onclick="calcularimc()">
+        </div>
+
+        <div id="res">
+                <br><p></p>
+        </div>
+    </div>
+    
+</body>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    body{
+        background-color: rgba(0, 0, 0, 0.929);
+        color: rgb(11, 11, 10);
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        font-family: Arial, Helvetica, sans-serif;
+        height: 100vh;
+    }
+    .corpo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: orange;
+        padding: 30px;
+        border-radius: 10px;
+        gap: 15px;  
+        height: 65vh;
+        box-shadow:10px 10px 50px 20px rgba(236, 235, 235, 0.342);
+    }
+hr{
+    width: 20rem;
+    color: black ;
+    background-color: black;
+    border: solid black;
+    padding: 0;
+}
+#botão{
+    width: 10rem;
+    height: 2rem;
+    color: rgb(240, 233, 233);
+    background-color: black;
+    font-size: 17px;
+    border: solid black;
+    border-radius: 8px;
+    transition: .9s;
+    cursor: pointer;
+}
+#botão:hover{
+    background-color: rgb(113, 238, 17);
+    color: black;
+    border:solid rgb(23, 230, 12);
+
+}
+#res{
+    height: 10rem;
+    width: 18rem;
+    background-color: black;
+    color: white;
+    border: 4px solid rgb(72, 75, 72);
+    font-size: 20px;
+    padding: 18px;
+    border-radius: 30px 5px 30px 5px;
+}
+.input{
+    padding: 10px;
+    border-radius: 15px;
+    border: solid orange;
+    font-size: 15PX;
+    outline: none;
+    margin-top: 2px;
+}
+.spans{
+    font-size: 12px;
+    text-align: center;
+    color: rgba(241, 39, 13, 0.911);
+    font-weight: bold;
+    display: none;
+}
+.a1{
+   color: aqua;
+}
+</style>
+<script src="script.js"></script>
+</html>
